@@ -1,0 +1,2 @@
+# introducing_yourself
+これは自己紹介カードを自動でつくってくれるものです。
