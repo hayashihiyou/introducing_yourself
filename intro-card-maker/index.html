@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>自己紹介カードメーカー</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="editor" aria-labelledby="editor-title">
+        <div class="section-heading">
+          <p class="eyebrow">Profile Card Maker</p>
+          <h1 id="editor-title">自己紹介カードメーカー</h1>
+        </div>
+
+        <form class="profile-form" id="profile-form">
+          <label class="field">
+            <span>写真</span>
+            <input id="photo-input" type="file" accept="image/*" />
+          </label>
+
+          <label class="field">
+            <span>名前</span>
+            <input id="name-input" type="text" maxlength="28" value="山田 はる" />
+          </label>
+
+          <label class="field">
+            <span>肩書き</span>
+            <input id="title-input" type="text" maxlength="34" value="Web制作を勉強中" />
+          </label>
+
+          <label class="field">
+            <span>ひとこと</span>
+            <textarea id="message-input" maxlength="110" rows="4">写真とことばで、自分らしい一枚を作ります。</textarea>
+          </label>
+
+          <label class="field">
+            <span>趣味</span>
+            <input id="hobby-input" type="text" maxlength="44" value="カフェ巡り / 音楽 / デザイン" />
+          </label>
+
+          <label class="field">
+            <span>SNS / 連絡先</span>
+            <input id="contact-input" type="text" maxlength="44" value="@haru_profile" />
+          </label>
+
+          <fieldset class="template-picker" aria-label="テンプレート">
+            <legend>テンプレート</legend>
+            <label>
+              <input type="radio" name="template" value="simple" checked />
+              <span>シンプル</span>
+            </label>
+            <label>
+              <input type="radio" name="template" value="cute" />
+              <span>かわいい</span>
+            </label>
+            <label>
+              <input type="radio" name="template" value="fresh" />
+              <span>今っぽい</span>
+            </label>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="preview-panel" aria-labelledby="preview-title">
+        <div class="preview-header">
+          <div>
+            <p class="eyebrow">Live Preview</p>
+            <h2 id="preview-title">完成イメージ</h2>
+          </div>
+          <button class="download-button" id="download-button" type="button">
+            PNG保存
+          </button>
+        </div>
+
+        <article class="profile-card theme-simple" id="profile-card" aria-label="自己紹介カード">
+          <div class="card-accent"></div>
+          <div class="photo-frame">
+            <img id="card-photo" alt="" hidden />
+            <span id="photo-placeholder">PHOTO</span>
+          </div>
+          <div class="card-copy">
+            <p class="card-label">Hello, I am</p>
+            <h2 id="card-name">山田 はる</h2>
+            <p class="card-title" id="card-title">Web制作を勉強中</p>
+            <p class="card-message" id="card-message">写真とことばで、自分らしい一枚を作ります。</p>
+          </div>
+          <dl class="card-details">
+            <div>
+              <dt>Hobby</dt>
+              <dd id="card-hobby">カフェ巡り / 音楽 / デザイン</dd>
+            </div>
+            <div>
+              <dt>Contact</dt>
+              <dd id="card-contact">@haru_profile</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
