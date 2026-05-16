@@ -37,7 +37,7 @@ const templateStyles = {
     muted: "#4f5b6f",
     accent: "#2b70bf",
     title: "#192132",
-    imageShape: "circle",
+    imageShape: "soft",
   },
   cute: {
     background: "#fff7fb",
@@ -45,7 +45,7 @@ const templateStyles = {
     muted: "#67324f",
     accent: "#be185d",
     title: "#9d174d",
-    imageShape: "circle",
+    imageShape: "soft",
   },
   fresh: {
     background: "#f7fbf8",
@@ -213,7 +213,7 @@ async function drawPhoto(ctx, style) {
     const image = await loadImage(state.photoSrc);
     drawCoverImage(ctx, image, x, y, size, size);
   } else {
-    ctx.fillStyle = "rgba(255, 255, 255, 0.72)";
+    ctx.fillStyle = state.template === "cute" ? "#ffffff" : "rgba(255, 255, 255, 0.72)";
     ctx.fillRect(x, y, size, size);
     ctx.fillStyle = "rgba(23, 32, 47, 0.48)";
     ctx.font = "700 42px sans-serif";
@@ -232,7 +232,7 @@ async function drawPhoto(ctx, style) {
     ctx.lineWidth = 8;
     ctx.strokeStyle = "#17202f";
     ctx.beginPath();
-    ctx.arc(x + size / 2, y + size / 2, size / 2 - 4, 0, Math.PI * 2);
+    roundRect(ctx, x + 4, y + 4, size - 8, size - 8, 50);
     ctx.stroke();
   }
 }
