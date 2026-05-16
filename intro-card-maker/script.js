@@ -192,7 +192,7 @@ function drawCardBackground(ctx, width, height, style, template) {
 async function drawPhoto(ctx, style) {
   const x = 92;
   const y = 92;
-  const size = 320;
+  const size = 380;
 
   if (state.template === "fresh") {
     ctx.beginPath();
@@ -273,11 +273,11 @@ function drawTextContent(ctx, style) {
 
   const titleY = 704 + nameLines.length * 96;
   ctx.fillStyle = style.title;
-  ctx.font = "800 40px sans-serif";
+  ctx.font = "800 45px sans-serif";
   wrapText(ctx, title, left, titleY, maxWidth, 50, 2);
 
   ctx.fillStyle = style.muted;
-  ctx.font = "500 37px sans-serif";
+  ctx.font = "500 42px sans-serif";
   wrapText(ctx, message, left, titleY + 108, maxWidth, 58, 4);
 
   const detailsY = 1162;
@@ -290,7 +290,7 @@ function drawDetail(ctx, label, value, x, y, style) {
   ctx.font = "900 25px sans-serif";
   ctx.fillText(label, x, y);
   ctx.fillStyle = style.text;
-  ctx.font = "800 31px sans-serif";
+  ctx.font = "800 36px sans-serif";
   wrapText(ctx, value, x, y + 42, 896, 38, 1);
 }
 
