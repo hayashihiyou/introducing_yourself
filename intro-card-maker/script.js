@@ -1,11 +1,11 @@
 const state = {
   photoSrc: "",
   template: "simple",
-  name: "山田 はる",
-  title: "Web制作を勉強中",
-  message: "写真とことばで、自分らしい一枚を作ります。",
-  hobby: "カフェ巡り / 音楽 / デザイン",
-  contact: "@haru_profile",
+  name: "",
+  title: "",
+  message: "",
+  hobby: "",
+  contact: "",
 };
 
 const inputs = {
@@ -45,7 +45,7 @@ const templateStyles = {
     muted: "#67324f",
     accent: "#be185d",
     title: "#9d174d",
-    imageShape: "rounded",
+    imageShape: "circle",
   },
   fresh: {
     background: "#f7fbf8",

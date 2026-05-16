@@ -256,13 +256,6 @@ h1 {
   align-self: center;
 }
 
-.card-label {
-  margin: 0 0 10px;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
 
 .profile-card h2 {
   margin: 0;
