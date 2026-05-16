@@ -167,11 +167,6 @@ function drawCardBackground(ctx, width, height, style, template) {
   if (template === "simple") {
     ctx.fillStyle = "#17202f";
     ctx.fillRect(0, 0, 26, height);
-    const gradient = ctx.createLinearGradient(width, 0, 160, 700);
-    gradient.addColorStop(0, "rgba(43, 112, 191, 0.16)");
-    gradient.addColorStop(1, "rgba(43, 112, 191, 0)");
-    ctx.fillStyle = gradient;
-    ctx.fillRect(0, 0, width, height);
     return;
   }
 
@@ -209,7 +204,6 @@ async function drawPhoto(ctx, style) {
   if (state.template === "cute") {
     ctx.save();
     ctx.translate(x + size / 2, y + size / 2);
-    ctx.rotate((-2 * Math.PI) / 180);
     ctx.translate(-(x + size / 2), -(y + size / 2));
   }
 

@@ -65,15 +65,6 @@ textarea {
   width: 100%;
 }
 
-.eyebrow {
-  margin: 0 0 6px;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
 h1,
 h2,
 p {
@@ -303,14 +294,13 @@ h1 {
 }
 
 .theme-simple {
-  background: #f8fafc;
+  background: #ffffff;
   color: #192132;
 }
 
 .theme-simple .card-accent {
   background:
     linear-gradient(90deg, #17202f 0 8px, transparent 8px),
-    linear-gradient(155deg, rgba(43, 112, 191, 0.12), transparent 48%);
 }
 
 .theme-simple .photo-frame {
@@ -343,7 +333,6 @@ h1 {
   border: 4px solid #ffffff;
   border-radius: 28px;
   box-shadow: 0 10px 28px rgba(190, 24, 93, 0.16);
-  transform: rotate(-2deg);
 }
 
 .theme-cute .card-label,
