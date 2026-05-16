@@ -265,7 +265,7 @@ function drawTextContent(ctx, style) {
   ctx.fillText("Hello, I am", left, 565);
 
   ctx.fillStyle = style.text;
-  ctx.font = "900 90px sans-serif";
+  ctx.font = "900 72px sans-serif";
   const nameLines = fitLines(ctx, name, maxWidth, 2);
   nameLines.forEach((line, index) => {
     ctx.fillText(line, left, 665 + index * 96);
